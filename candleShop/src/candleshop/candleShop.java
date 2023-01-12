@@ -153,7 +153,7 @@ while (!response.equals("Y") && !response.equals("N")){
 }
     if (response.equals("Y")){
          
-        System.out.println("Thank you for joining! Today's reward points are :" + rewardsPoints + " points.");
+        System.out.println("Thank you for joining! Today's reward points are: " + rewardsPoints + " points.");
     }
     else{
         System.out.println("Thank you! Have a nice day!");
