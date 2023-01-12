@@ -7,31 +7,31 @@ public class candleShop {
  //store setup   
  
  Scanner scnr = new Scanner (System.in);
- System.out.println("Hello Shopkeeper! Lets set up your shop!\n");
-
+ System.out.println("Hello Shopkeeper! Lets set up your inventory!\n");
+// You can currently set up stock for three candles.
  
     System.out.println("Please enter the name of candle 1");
         String candle1Name = scnr.nextLine();
     System.out.println("Please enter the type of candle 1");
-        int candle1Type = scnr.nextInt();
+        String candle1Type = scnr.nextLine();
     System.out.println("Please enter the price of candle 1");
         double candle1Price = scnr.nextDouble();
-    System.out.println("Please enter the burn time of candle 1");
+    System.out.println("Please enter the burn time in minutes of candle 1");
         int candle1Burn = scnr.nextInt();
     scnr.nextLine();
-    System.out.println("The candle's name is " + candle1Name + ". It is type " + candle1Type + ". The cost is $" + candle1Price + ". The burn time is " + candle1Burn + " minutes.\n");
+    System.out.println("The candle's name is " + candle1Name + ". Its type is a " + candle1Type + ". The cost is $" + candle1Price + ". The burn time is " + candle1Burn + " minutes.\n");
   candle candle1 = new candle (candle1Name, candle1Type, candle1Price, candle1Burn);
 
 System.out.println("Please enter the name of candle 2");
         String candle2Name = scnr.nextLine();
     System.out.println("Please enter the type of candle 2");
-        int candle2Type = scnr.nextInt();
+        String candle2Type = scnr.nextLine();
     System.out.println("Please enter the price of candle 2");
         double candle2Price = scnr.nextDouble();
-    System.out.println("Please enter the burn time of candle 2");
+    System.out.println("Please enter the burn time in minutes of candle 2");
         int candle2Burn = scnr.nextInt();
     scnr.nextLine();
-    System.out.println("The candle's name is " + candle2Name + ". It is type " + candle2Type + ". The cost is $" + candle2Price + ". The burn time is " + candle2Burn + " minutes.\n");
+    System.out.println("The candle's name is " + candle2Name + ". Its type is a " + candle2Type + ". The cost is $" + candle2Price + ". The burn time is " + candle2Burn + " minutes.\n");
 
   candle candle2 = new candle (candle2Name, candle2Type, candle2Price, candle2Burn);
 
@@ -39,34 +39,34 @@ System.out.println("Please enter the name of candle 2");
 System.out.println("Please enter the name of candle 3");
         String candle3Name = scnr.nextLine();
     System.out.println("Please enter the type of candle 3");
-        int candle3Type = scnr.nextInt();
+        String candle3Type = scnr.nextLine();
     System.out.println("Please enter the price of candle 3");
         double candle3Price = scnr.nextDouble();
-    System.out.println("Please enter the burn time of candle 3");
+    System.out.println("Please enter the burn time in minutes of candle 3");
         int candle3Burn = scnr.nextInt();
     scnr.nextLine();
-    System.out.println("The candle's name is " + candle3Name + ". It is type " + candle3Type + ". The cost is $" + candle3Price + ". The burn time is " + candle3Burn + " minutes./\n");
+    System.out.println("The candle's name is " + candle3Name + ". Its type is a " + candle3Type + ". The cost is $" + candle3Price + ". The burn time is " + candle3Burn + " minutes./\n");
 
   candle candle3 = new candle (candle3Name, candle3Type, candle3Price, candle3Burn);
  
  //Customer purchase
  
-System.out.println("Hello! Welcome to my candle shop!\n");
+System.out.println("Hello! Welcome to my candle shop!\nWe are running a special limited time offer today! If you spend over $50 you will recieve a 20% discount and orders over $100 will get 30% off. \n**Please note due to limited availability you are limited to 10 of each candle.** \n");
 
-System.out.println("How many candles of type 1 would you like?");
+System.out.println("How many " + candle1Name + " " + candle1Type + " candles would you like?");
     int numCandle1 = scnr.nextInt(); 
     
    while (numCandle1 > 10 || numCandle1 < 0){
        System.out.println("Please enter a different amount. You can only buy a maximum of 10 candles.");
     numCandle1 = scnr.nextInt();
    }
-System.out.println("How many candles of type 2 would you like?");
+System.out.println("How many " + candle2Name + " " +candle2Type + " candles would you like?");
     int numCandle2 = scnr.nextInt();
      while (numCandle2 > 10 || numCandle2 < 0){
        System.out.println("Please enter a different amount. You can only buy a maximum of 10 candles.");
     numCandle2 = scnr.nextInt();
    }
-System.out.println("How many candles of type 3 would you like?");
+System.out.println("How many " + candle3Name + " " + candle3Type + " candles would you like?");
     int numCandle3 = scnr.nextInt();  
      while (numCandle3 > 10 || numCandle3 < 0){
        System.out.println("Please enter a different amount. You can only buy a maximum of 10 candles.");
@@ -83,23 +83,23 @@ double totPurchase = totCandle1 + totCandle2 + totCandle3;
 
 double discount;
 
-if (totPurchase <= 20){
+if (totPurchase <= 49){
     discount = 0;
 }    
-else if (totPurchase > 20 && totPurchase <=35){
-         discount = totPurchase * 0.05;
-       //  System.out.println("Your total purchase today with our 5% discount is: $" + discount5);    
-}
-else if (totPurchase > 35 && totPurchase <= 55){
-        discount = totPurchase * 0.07;
-       // System.out.println("Your total purchase today with our 7% discount is: $" + discount7);
-}
-else if (totPurchase > 55 && totPurchase <= 100){
-        discount = totPurchase * 0.10;
+//else if (totPurchase > 20 && totPurchase <=35){
+//         discount = totPurchase * 0.05;
+//       //  System.out.println("Your total purchase today with our 5% discount is: $" + discount5);    
+//}
+//else if (totPurchase > 35 && totPurchase <= 55){
+//        discount = totPurchase * 0.07;
+//       // System.out.println("Your total purchase today with our 7% discount is: $" + discount7);
+//}
+else if (totPurchase > 50 && totPurchase <= 100){
+        discount = totPurchase * 0.20;
        // System.out.println("Your total purchase today with our 10% discount is: $" + discount10);
 }
 else {
-        discount = totPurchase * 0.20;
+        discount = totPurchase * 0.30;
        // System.out.println("Your total purchase today with our 20% discount is: $" + discount20);
 }
 double totSavings = totPurchase - discount;
