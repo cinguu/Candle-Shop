@@ -14,12 +14,12 @@ public class candle {
 
   // FIELDS
   private String name ; // This object's "name", i.e., "Taper", "Pillar", "Tea Light", etc.
-  private int type; // This object's Type: 1, 2, or 3
+  private String type; // This object's Type: 1, 2, or 3
   private double cost; // This object's cost
   private int burnTime; // This object's burn time in minutes
 
   // CONSTRUCTOR
-  public candle(String nam, int typ, double cst, int brn) {
+  public candle(String nam, String typ, double cst, int brn) {
     this.name = nam; // Set this Candle object's name field
     this.type = typ; // Set this Candle object's type field
     this.cost = cst; // Set this Candle object's cost field
@@ -37,12 +37,12 @@ public class candle {
   }
 
   // GETTER FOR TYPE
-  public int getType() {
+  public String getType() {
     return this.type; // Return the type number of the current Candle object
   }
 
   // SETTER FOR TYPE
-  public void setType(int typ) {
+  public void setType(String typ) {
     this.type = typ; // Set the type of the current Candle object
   }
 
@@ -74,4 +74,3 @@ public class candle {
   
 
 }
-
